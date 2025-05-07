@@ -1,0 +1,30 @@
+meta {
+  name: POST
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3333/task
+  body: json
+  auth: bearer
+}
+
+headers {
+  : 
+}
+
+auth:bearer {
+  token: oat_MQ.bXVWMnVLd2g5T01Dd2ZFb1lwYnZxYzlaX2NCWWxrTjEwM1BzbTNpeDE5NDIwOTY0Njk
+}
+
+body:json {
+  {
+    
+    "title": "Corrigir Front",
+    "description": "corrigir tela",
+    "done": false,
+    "folder_id": 1
+  
+  }
+}

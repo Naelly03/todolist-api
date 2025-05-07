@@ -19,6 +19,16 @@ export default class extends BaseSchema {
       .onUpdate('CASCADE')
       .onDelete('CASCADE')
 
+      table
+      .integer('folder_id')
+      .nullable()
+      .unsigned()
+      .references('id')
+      .inTable('folders')
+      .onUpdate('CASCADE')
+      .onDelete('CASCADE')
+
+
       table.timestamp('created_at')
       table.timestamp('updated_at')
     })

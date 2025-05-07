@@ -2,7 +2,7 @@ import Task from '#models/task'
 import { createTaskValidator, updateTaskValidator } from '#validators/task'
 import type { HttpContext } from '@adonisjs/core/http'
 
-export default class SensorsController {
+export default class TasksController {
 
     async index({ auth }: HttpContext){
         const user = auth.user!
@@ -11,11 +11,12 @@ export default class SensorsController {
     }
     async store({ request, auth, response}: HttpContext){
         try {
-            const {title, description} = await request.validateUsing(createTaskValidator)
+            const {title, description, folder_id} = await request.validateUsing(createTaskValidator)
             const user = auth.user!
             await user.related('tasks').create({
                 title,
-                description
+                description,
+                folderId: folder_id
             })
             
             return {
