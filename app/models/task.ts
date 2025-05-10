@@ -21,7 +21,7 @@ export default class Task extends BaseModel {
   declare userId: number
 
   @column()
-  declare folderId: number
+  declare folder_id: number
 
   @belongsTo(()=> User)
   declare user: BelongsTo<typeof User>

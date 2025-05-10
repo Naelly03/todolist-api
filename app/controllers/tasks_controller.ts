@@ -24,7 +24,7 @@ export default class TasksController {
       const task = await user.related('tasks').create({
         title,
         description,
-        folderId: folder_id
+        folder_id: folder_id
       })
       
       return response.status(201).json(task)
