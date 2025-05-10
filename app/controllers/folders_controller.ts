@@ -5,8 +5,8 @@ import { HttpContext } from "@adonisjs/core/http"
 export default class FolderController{
     async index({ auth }: HttpContext){
             const user = auth.user!
-            await user.preload('tasks')
-            return user.tasks
+            await user.preload('folders')
+            return user.folders
         }
 
     async store({ request, auth, response}: HttpContext){
