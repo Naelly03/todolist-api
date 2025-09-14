@@ -5,7 +5,7 @@ API REST desenvolvida com AdonisJS v6 para gerenciamento de tarefas, com suporte
 
 ⚙️ AdonisJS v6 (Node.js + TypeScript)
 
-🗄️ SQLite ou PostgreSQL
+🗄️ PostgreSQL
 
 🐳 Docker (opcional)
 
